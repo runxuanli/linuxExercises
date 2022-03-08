@@ -1,3 +1,11 @@
 #!/bin/bash
 
-echo "usage: $0 <dir> <n>" 1>&2
+if [[ $# -ne 2 ]]; then
+    echo "usage: $0 <dir> <n>" 1>&2
+    exit 0
+fi
+
+dir=$1
+n=$2
+
+find $dir -name "file*" -size +${n}c -exec rm {} ";" 
