@@ -1,12 +1,11 @@
 #!/bin/bash
 
-cd ~/Desktop/linuxExercises
 mkdir five
+cd five
 
 for i in {1..5}
 do
 
-    cd ~/Desktop/linuxExercises/five
     mkdir "dir$i"
     cd "dir$i"
 
@@ -20,6 +19,8 @@ do
 	done
 	
     done
+
+    cd ..
 done
 
 
